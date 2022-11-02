@@ -6,7 +6,7 @@ def connect_db(app):
     app.app_context().push()
     
 class Pet(db.Model):
-    
+    __tablename__='pets'
     def __repr__(self):
         return f"<id={self.id}, name={self.name}, species{self.species}, photo_url={self.photo_url}, age={self.age},notes={self.notes},available={self.available}>"
     

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Pet{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Add a pet</h1>
+            <form action="/add" method="POST">
+                {% include "form.html" %}
+                <button class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

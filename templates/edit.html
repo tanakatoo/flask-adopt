@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Pet Details{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Edit a pet</h1>
+
+            <form action="/{{p.id}}" method="POST">
+
+                {% include "form.html" %}
+                {{form.available.label(class="form-label")}}
+                {{form.available}}
+                <br>
+                <button class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

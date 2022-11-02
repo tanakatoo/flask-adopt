@@ -1,0 +1,13 @@
+{{ form.hidden_tag() }}
+{% for field in form %}
+{% if (field.widget.input_type != 'hidden') and (field.name !='available') %}
+{{field.label(class="form-label")}}
+{{field(class="form-control")}}
+
+{% for error in field.errors %}
+<div><span class="error">{{error}}</span></div>
+{% endfor %}
+
+
+{% endif %}
+{% endfor %}

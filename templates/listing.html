@@ -1,1 +1,32 @@
-<h1>Blue</h1>
+{% extends 'base.html' %}
+
+{% block title %}All Pets{% endblock %}
+{% block content %}
+<div class="center">
+    <h1>Pet Listing</h1>
+    <button class="btn btn-primary"><a href="/add">Add Pet</a></button>
+</div>
+<div class="container">
+    <div class="row row-cols-auto ">
+        {% for p in pets %}
+        <div class="col">
+            <div class="card verticalSpace" style="width: 18rem;">
+                {% if p.photo_url %}
+                <img src="{{p.photo_url}}" class="card-img-top" alt="...">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title"><a class="nameLink" href="/{{p.id}}">{{p.name}}</a>{% if p.available %} <b>is
+                            available!</b>
+                        {% else %}
+                        is not available
+                        {% endif %}</h5>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+
+
+    </div>
+</div>
+{% endblock %}

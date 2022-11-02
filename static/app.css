@@ -1,7 +1,21 @@
-body{
-    background-color: blue;
+.verticalSpace{
+    margin-top: 10px;
 }
 
-h1{
-    color: brown;
+a,a:hover,a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.center{
+    text-align: center;
+}
+
+.nameLink,.nameLink:hover,.nameLink:visited{
+    color: rgb(73, 73, 255);
+}
+
+.error{
+    color: red;
+    font-size: 14px;
 }
