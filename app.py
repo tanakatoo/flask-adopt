@@ -34,7 +34,7 @@ def add():
         photo_url=form.photo_url.data
         age=form.age.data
         notes=form.notes.data
-        available=form.available.data
+
         pet=Pet(name=name,photo_url=photo_url,species=species,age=age,notes=notes)
         db.session.add(pet)
         db.session.commit()
